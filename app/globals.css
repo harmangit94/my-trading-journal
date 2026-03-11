@@ -3,29 +3,35 @@
 @tailwind utilities;
 
 @layer base {
+  /* ── Light theme ── */
   :root {
-    --background: 222 47% 5%;
-    --foreground: 214 32% 91%;
-    --card: 222 44% 10%;
-    --card-foreground: 214 32% 91%;
-    --popover: 222 44% 10%;
-    --popover-foreground: 214 32% 91%;
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
     --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 5%;
-    --secondary: 222 30% 16%;
-    --secondary-foreground: 214 32% 91%;
-    --muted: 222 30% 16%;
-    --muted-foreground: 215 20% 45%;
-    --accent: 222 30% 18%;
-    --accent-foreground: 214 32% 91%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 94%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 92%;
+    --accent-foreground: 222 47% 11%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 222 30% 18%;
-    --input: 222 30% 16%;
+    --border: 214 32% 89%;
+    --input: 214 32% 89%;
     --ring: 217 91% 60%;
     --radius: 0.5rem;
+    --sidebar: 222 47% 16%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-border: 222 47% 22%;
+    --sidebar-muted: 215 20% 55%;
   }
 
+  /* ── Dark theme ── */
   .dark {
     --background: 222 47% 5%;
     --foreground: 214 32% 91%;
@@ -46,6 +52,10 @@
     --border: 222 30% 18%;
     --input: 222 30% 16%;
     --ring: 217 91% 60%;
+    --sidebar: 222 47% 8%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-border: 222 30% 14%;
+    --sidebar-muted: 215 20% 45%;
   }
 }
 
@@ -61,10 +71,10 @@
 
 @layer utilities {
   .profit {
-    @apply text-green-400;
+    @apply text-emerald-600 dark:text-emerald-400;
   }
   .loss {
-    @apply text-red-400;
+    @apply text-rose-600 dark:text-rose-400;
   }
   .scrollbar-thin {
     scrollbar-width: thin;
